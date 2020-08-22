@@ -39,6 +39,9 @@ brew cask install visual-studio-code
 # Install zsh
 if ! which zsh >/dev/null 2>&1; then
 	brew install zsh zsh-completions
+	# Set default shell to zsh
+	chsh -s "$(which zsh)"
+	zsh --version
 fi
 
 # Merge zshrc contents if one already exists, otherwise just copy it over
@@ -73,10 +76,6 @@ brew cask install font-meslo-lg-nerd-font
 # Copy vscode settings
 mkdir -p ~/Library/Application\ Support/Code/User
 cp vscode/* ~/Library/Application\ Support/Code/User/
-
-# Set default shell to zsh
-chsh -s "$(which zsh)"
-zsh --version
 
 # Set git settings/aliases
 git config --global alias.co checkout
