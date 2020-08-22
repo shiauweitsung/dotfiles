@@ -1,9 +1,10 @@
 {
     "terminal.integrated.shell.osx": "zsh",
-    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
+    "terminal.external.osxExec": "iTerm.app",
     "editor.rulers": [
         120
     ],

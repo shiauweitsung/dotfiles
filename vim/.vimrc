@@ -181,12 +181,12 @@ imap [C <ESC>:tabnext<CR>
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set foldenable
-set foldcolumn=5
+"set foldcolumn=5
 set foldmethod=indent
 set foldlevelstart=999
 highlight Folded ctermbg=none ctermfg=grey
 highlight FoldColumn ctermbg=none ctermfg=white
-nnoremap <SPACE> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+"nnoremap <SPACE> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Text

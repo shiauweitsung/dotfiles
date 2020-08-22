@@ -27,7 +27,7 @@ installRust() {
 
 	# Rust toolchains
 	rustup component add clippy
-	rustup target add aarch64-apple-ios armv7-apple-ios armv7s-apple-ios x86_64-apple-ios i386-apple-ios
+	rustup target add aarch64-apple-ios x86_64-apple-ios
 	rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android
 }
 installRust
@@ -54,24 +54,34 @@ else
 fi
 
 # Install Zinit
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-zinit self-update
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+#zinit self-update
 
-# Install Antibody
-brew install getantibody/tap/antibody
-cp zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-antibody update
+installAntibody() {
+	# Install Antibody
+	brew install getantibody/tap/antibody
+	cp zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
+	antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+	antibody update
+}
 
-# Install Powerlevel9k and Nerdfonts
-brew tap sambadevi/powerlevel9k
-brew install powerlevel9k
-brew tap homebrew/cask-fonts
-brew cask install font-meslo-lg-nerd-font
+installP9k() {
+	# Install Powerlevel9k and Nerdfonts
+	brew tap sambadevi/powerlevel9k
+	brew install powerlevel9k
+	brew tap homebrew/cask-fonts
+	brew cask install font-meslo-lg-nerd-font
+}
 
 # Install Powerlevel10k
 #brew tap romkatv/powerlevel10k
 #brew install powerlevel10k
+
+# Copy vim settings
+cp vim/.vimrc ~/.vimrc
+
+# Copy tmux settings
+cp tmux/.tmux.conf ~/.tmux.conf
 
 # Copy vscode settings
 mkdir -p ~/Library/Application\ Support/Code/User
@@ -83,5 +93,3 @@ git config --global alias.br branch
 git config --global alias.com commit
 git config --global alias.st status
 git config --global credential.helper 'cache --timeout 604800'
-
-echo "!! Terminal Apps need 'MesloLGM Nerd Font' in order to properly display Powerline Fonts"

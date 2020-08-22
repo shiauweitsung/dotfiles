@@ -18,3 +18,7 @@ uninstallRust() {
 	rustup self uninstall
 }
 uninstallRust
+
+uninstallZinit() {
+	rm -rf ~/.zinit/
+}
