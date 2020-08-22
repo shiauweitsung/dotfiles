@@ -41,6 +41,19 @@ if ! which zsh >/dev/null 2>&1; then
 	brew install zsh zsh-completions
 fi
 
+# Merge zshrc contents if one already exists, otherwise just copy it over
+if [ -f ~/.zshrc ]; then
+	echo "=== Merging .zshrc Files (MIGHT REQUIRE MANUAL CLEANUP!) ==="
+	cat .zshrc | cat - ~/.zshrc > temp && rm ~/.zshrc && mv temp ~/.zshrc
+else
+	echo "=== Copying .zshrc File ==="
+	cp .zshrc ~/.zshrc
+fi
+
+# Install Zinit
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+zinit self-update
+
 # Install Antibody
 brew install getantibody/tap/antibody
 cp .zsh_plugins.txt ~/.zsh_plugins.txt
@@ -64,15 +77,6 @@ cp vscode/* ~/Library/Application\ Support/Code/User/
 # Set default shell to zsh
 chsh -s "$(which zsh)"
 zsh --version
-
-# Merge our zshrc contents if one already exists, otherwise just copy it over
-if [ -f ~/.zshrc ]; then
-	echo "=== Merging .zshrc Files (MIGHT REQUIRE MANUAL CLEANUP!) ==="
-	cat .zshrc | cat - ~/.zshrc > temp && rm ~/.zshrc && mv temp ~/.zshrc
-else
-	echo "=== Copying .zshrc File ==="
-	cp .zshrc ~/.zshrc
-fi
 
 # Set git settings/aliases
 git config --global alias.co checkout
