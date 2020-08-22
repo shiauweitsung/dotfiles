@@ -43,7 +43,7 @@ fi
 
 # Install Antibody
 brew install getantibody/tap/antibody
-cp .zsh_plugins.txt ~/.zsh_plugins.txt
+cp zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 antibody update
 
@@ -68,10 +68,10 @@ zsh --version
 # Merge our zshrc contents if one already exists, otherwise just copy it over
 if [ -f ~/.zshrc ]; then
 	echo "=== Merging .zshrc Files (MIGHT REQUIRE MANUAL CLEANUP!) ==="
-	cat .zshrc | cat - ~/.zshrc > temp && rm ~/.zshrc && mv temp ~/.zshrc
+	cat zsh/.zshrc | cat - ~/.zshrc > temp && rm ~/.zshrc && mv temp ~/.zshrc
 else
 	echo "=== Copying .zshrc File ==="
-	cp .zshrc ~/.zshrc
+	cp zsh/.zshrc ~/.zshrc
 fi
 
 # Set git settings/aliases
