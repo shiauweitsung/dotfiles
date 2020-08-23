@@ -11,10 +11,12 @@
 ## Post Install Setup
 
 #### iTerm2
-- If `zsh` is installed by Homebrew, iTerm2 needs to set Custom Shell to `/usr/local/zsh` on startup
+- If `zsh` is installed by Homebrew, set Custom Shell to `/usr/local/zsh` on startup in iTerm2 settings
 
 #### zsh
-- `p10k configure` to configure prompt style
+- Open iTerm2 and type `p10k configure` to
+	- download `MesloLGS NF`
+	- configure prompt style
 
 ## Optional Post Install Steps
 

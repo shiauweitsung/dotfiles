@@ -68,7 +68,7 @@ install_shell() {
 }
 
 install_vim() {
-	# Copy vim settings
+	info "Copying .vimrc file"
 	cp vim/.vimrc ~/.vimrc
 }
 
