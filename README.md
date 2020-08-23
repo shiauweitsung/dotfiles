@@ -1,5 +1,7 @@
 # dotfiles
 - dotfiles for macOS
+	- Shell: iTerm + zsh + Zinit + Powerlevel10k
+	- Editor: Vim, VSCode
 
 ---
 
