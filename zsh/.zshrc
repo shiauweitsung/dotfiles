@@ -7,11 +7,11 @@ typeset -g HISTSIZE=5000 SAVEHIST=5000 HISTFILE=~/.zsh_history
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin
-#export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+source ~/.cargo/env
 export LANG="en_US.UTF-8"
 
 #
-# Enable Powerlevel10k instant prompt
+# Powerlevel10k instant prompt
 #
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -58,8 +58,6 @@ zinit light-mode for \
 #
 
 # Fast-syntax-highlighting & autosuggestions
-#zinit light zsh-users/zsh-autosuggestions
-#zinit light zdharma/fast-syntax-highlighting
 zinit wait lucid for \
 	atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
 		zdharma/fast-syntax-highlighting \
@@ -68,17 +66,12 @@ zinit wait lucid for \
 	blockf \
 		zsh-users/zsh-completions
 
-#zinit snippet OMZ::lib/git.zsh
-#zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit wait lucid for \
 	zdharma/zsh-unique-id \
 	OMZ::lib/git.zsh \
 	atload"unalias grv g" \
 	OMZ::plugins/git/git.plugin.zsh
 
-# Install Powerlevel10k
+# Powerlevel10k
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
-
-# Import plugins
-source ~/.cargo/env
