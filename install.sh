@@ -48,9 +48,9 @@ install_shell() {
 	# Install zsh
 	if ! check_cmd zsh; then
 		brew install zsh zsh-completions
-		# Set default shell to zsh
-		chsh -s "$(which zsh)"
 	fi
+	# Set default shell to zsh
+	chsh -s "$(which zsh)"
 
 	# Merge zshrc contents if one already exists, otherwise just copy it over
 	if [ -f ~/.zshrc ]; then
