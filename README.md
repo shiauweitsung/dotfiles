@@ -6,17 +6,26 @@
 ./install.sh
 ```
 
-## Post Install Setup 
+---
+
+## Post Install Setup
+
+#### iTerm2
 - Set terminal font to one of the Nerd Fonts
 - If `zsh` is installed by Homebrew, iTerm2 needs to set Custom Shell to `/usr/local/zsh` on startup
 
 ## Optional Post Install Steps
-- [VSCode - Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to add `code` command to terminals
+
+#### iTerm2
 - [Option + Left/Right Arrow Keys to move cursor by word](http://tgmerritt.github.io/jekyll/update/2015/06/23/option-arrow-in-iterm2.html)
     - Keyboard Shortcut: `Option+Left Arrow`, `Option+Right Arrow`
     - Action: `Send Escape Sequence`
     - ESC+: `b` for backward, `f` for forward
-- ~~`go get -u github.com/derekparker/delve/cmd/dlv`~~
+
+#### VSCode
+- [VSCode - Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to add `code` command to terminals
+
+---
 
 ## References
 - [Shell Style Guide](https://google.github.io/styleguide/shellguide.html)

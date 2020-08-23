@@ -3,7 +3,7 @@
 #
 
 # History file configuration
-typeset -g SAVEHIST=500 HISTFILE=~/.zsh_history
+typeset -g HISTSIZE=5000 SAVEHIST=5000 HISTFILE=~/.zsh_history
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/bin
