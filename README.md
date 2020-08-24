@@ -17,12 +17,14 @@
 
 #### zsh
 - Open iTerm2 and type `p10k configure` to
-	- download `MesloLGS NF`
-	- configure prompt style
+	- Download `MesloLGS NF`
+	- Configure prompt style
 
 ## Optional Post Install Steps
 
 #### iTerm2
+- Use different [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+	- Clone the repo, double-click the scheme to import
 - [Option + Left/Right Arrow Keys to move cursor by word](http://tgmerritt.github.io/jekyll/update/2015/06/23/option-arrow-in-iterm2.html)
 	- Keyboard Shortcut: `Option+Left Arrow`, `Option+Right Arrow`
 	- Action: `Send Escape Sequence`
