@@ -26,9 +26,10 @@
 - Use different [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 	- Clone the repo, double-click the scheme to import
 - [Option + Left/Right Arrow Keys to move cursor by word](http://tgmerritt.github.io/jekyll/update/2015/06/23/option-arrow-in-iterm2.html)
-	- Keyboard Shortcut: `Option+Left Arrow`, `Option+Right Arrow`
-	- Action: `Send Escape Sequence`
-	- ESC+: `b` for backward, `f` for forward
+	- Go to: `Preferences → Profiles → Keys`
+		- Keyboard Shortcut: `⌥← (Option+Left Arrow)`, `⌥→ (Option+Right Arrow)`
+		- Action: `Send Escape Sequence`
+		- ESC+: `b` for backward, `f` for forward
 
 #### VSCode
 - [VSCode - Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to add `code` command to terminals
