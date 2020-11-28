@@ -19,7 +19,7 @@ update_homebrew() {
   # Update Homebrew
   brew update
   # Update packages
-  brew upgrade --cleanup
+  brew upgrade
 }
 
 update_zinit() {
