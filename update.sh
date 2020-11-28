@@ -6,7 +6,20 @@
 ZINIT_HOME="$HOME/.zinit"
 
 main() {
+  update_homebrew
   update_zinit
+}
+
+update_homebrew() {
+  if ! check_cmd brew; then
+    info "No brew for update"
+  fi
+
+  info "Update homebrew"
+  # Update Homebrew
+  brew update
+  # Update packages
+  brew upgrade --cleanup
 }
 
 update_zinit() {
@@ -37,6 +50,10 @@ WHITE='\033[0;37m'
 
 info() {
   printf "\r  [ ${BLUE}..${NC} ] $1\n"
+}
+
+check_cmd() {
+  command -v "$1" >/dev/null 2>&1
 }
 
 check_exist() {
