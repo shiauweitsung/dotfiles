@@ -12,7 +12,7 @@ main() {
 }
 
 update_rust() {
-  if !check_cmd rustup; then
+  if ! check_cmd rustup; then
     info "No rust for update"
   fi
 
