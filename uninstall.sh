@@ -23,6 +23,8 @@ uninstall_languages() {
   brew remove go
   brew remove node yarn
 
+  brew remove --cask adoptopenjdk
+
   rustup self uninstall
 }
 

@@ -25,6 +25,9 @@ install_languages() {
   brew install go
   brew install node yarn
 
+  # Install OpenJDK
+  brew install --cask adoptopenjdk
+
   # Install Rust
   if ! check_cmd rustup; then
     curl https://sh.rustup.rs -sSf | sh -s -- -y
@@ -43,7 +46,7 @@ install_languages() {
 }
 
 install_terminal() {
-  brew cask install iterm2
+  brew install --cask iterm2
 }
 
 install_shell() {
@@ -65,8 +68,8 @@ install_shell() {
 
   # Install Nerdfonts
   #brew tap homebrew/cask-fonts
-  #brew cask install font-meslo-lg-nerd-font
-  #brew cask install font-fira-code-nerd-font
+  #brew install --cask font-meslo-lg-nerd-font
+  #brew install --cask font-fira-code-nerd-font
 }
 
 install_vim() {
@@ -75,7 +78,7 @@ install_vim() {
 }
 
 install_editor() {
-  brew cask install visual-studio-code
+  brew install --cask visual-studio-code
   # Copy vscode settings
   mkdir -p ~/Library/Application\ Support/Code/User
   cp vscode/* ~/Library/Application\ Support/Code/User/
