@@ -10,17 +10,17 @@
 ./install.sh
 ```
 
-## Post Install Setup
+### Post Install Setup
 
-#### iTerm2
+#### iTerm2 use `zsh`
 - If `zsh` is installed by Homebrew, set Custom Shell to `/usr/local/zsh` on startup in iTerm2 settings
 
-#### zsh
+#### zsh use `p10k` theme
 - Open iTerm2 and type `p10k configure` to
 	- Download `MesloLGS NF`
 	- Configure prompt style
 
-## Optional Post Install Steps
+### Optional Post Install Steps
 
 #### iTerm2
 - Use different [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
@@ -33,6 +33,22 @@
 
 #### VSCode
 - [VSCode - Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to add `code` command to terminals
+
+---
+
+## Update
+```console
+./update.sh
+```
+
+---
+
+## Uninstall
+```console
+./uninstall.sh
+```
+
+---
 
 ## Exception Handling
 
