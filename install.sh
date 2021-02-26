@@ -15,6 +15,13 @@ main() {
   setup_git
 }
 
+install_clt() {
+  # Install Command Line Developer Tools for Xcode
+  if check_cmd xcode-select; then
+    xcode-select --install
+  fi
+}
+
 install_homebrew() {
   if ! check_cmd brew; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
