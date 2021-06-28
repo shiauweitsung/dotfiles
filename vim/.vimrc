@@ -222,6 +222,11 @@ highlight DiffDelete cterm=none ctermfg=black ctermbg=Red gui=none guifg=black g
 highlight DiffChange cterm=none ctermfg=black ctermbg=Yellow gui=none guifg=black guibg=Yellow
 highlight DiffText cterm=none ctermfg=black ctermbg=Magenta gui=none guifg=black guibg=Magenta
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remove symbol '^M' (Ctrl+V, Ctrl+M)
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <F6> :%s/\r//g<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Run script
