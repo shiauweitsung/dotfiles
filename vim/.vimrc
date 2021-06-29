@@ -226,7 +226,7 @@ highlight DiffText cterm=none ctermfg=black ctermbg=Magenta gui=none guifg=black
 " Remove symbol '^M' (Ctrl+V, Ctrl+M)
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-map <F6> :%s/\r//g<CR>
+map <F8> :%s/\r//g<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Run script
