@@ -223,10 +223,16 @@ highlight DiffChange cterm=none ctermfg=black ctermbg=Yellow gui=none guifg=blac
 highlight DiffText cterm=none ctermfg=black ctermbg=Magenta gui=none guifg=black guibg=Magenta
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Convert tabs to spaces
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <F8> :set expandtab<CR><Bar>:retab<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove symbol '^M' (Ctrl+V, Ctrl+M)
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-map <F8> :%s/\r//g<CR>
+map <F9> :%s/\r//g<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Run script
