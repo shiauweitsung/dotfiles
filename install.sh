@@ -33,7 +33,9 @@ install_languages() {
   brew install node yarn
 
   # Install OpenJDK
-  brew install --cask adoptopenjdk
+  if ! check_cmd java; then
+    brew install --cask adoptopenjdk
+  fi
 
   # Install Rust
   if ! check_cmd rustup; then
