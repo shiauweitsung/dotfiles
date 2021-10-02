@@ -142,6 +142,9 @@ highlight ColorColumn ctermbg=darkGrey
 " Status line
 set laststatus=2
 
+" Mouse
+set mouse=a
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""
