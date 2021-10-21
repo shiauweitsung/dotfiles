@@ -138,6 +138,8 @@ set showmatch
 " Ruler
 set colorcolumn=80
 highlight ColorColumn ctermbg=darkGrey
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
 
 " Status line
 set laststatus=2
