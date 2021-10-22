@@ -145,7 +145,10 @@ highlight ColorColumn ctermbg=darkGrey
 set laststatus=2
 
 " Mouse
-set mouse=a
+"set mouse=a
+
+" Jump to the last position when reopening a file
+au BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
