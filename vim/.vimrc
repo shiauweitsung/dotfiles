@@ -132,6 +132,9 @@ set lazyredraw
 " Set backspace
 set backspace=indent,eol,start
 
+" Set '\p' as paste toggle
+set pastetoggle=<leader>p
+
 " Show matching brackets
 set showmatch
 
