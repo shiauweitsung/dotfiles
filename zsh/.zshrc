@@ -15,18 +15,20 @@ export LANG="en_US.UTF-8"
 #
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 #
 # Aliases
 #
 
-alias l='ls -CF'	l.='ls -d .*'	la='ls -A'	ll='ls -alF'
-alias df='df -h'	du='du -h'	cp='cp -v'	mv='mv -v'
+alias l='ls -CF'    l.='ls -d .*'   la='ls -A'  ll='ls -alF'
+alias df='df -h'    du='du -h'      cp='cp -v'  mv='mv -v'
 
 # Git
-alias git=hub
+if [[ -x "$(command -v hub >/dev/null 2>&1)" ]]; then
+    alias git=hub
+fi
 alias glog_branches="git log --color=always --oneline --decorate --graph --branches"
 
 #
@@ -59,18 +61,18 @@ zinit light-mode for \
 
 # Fast-syntax-highlighting & autosuggestions
 zinit wait lucid for \
-	atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
-		zdharma-continuum/fast-syntax-highlighting \
-	atload"!_zsh_autosuggest_start" \
-		zsh-users/zsh-autosuggestions \
-	blockf \
-		zsh-users/zsh-completions
+    atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
+        zdharma-continuum/fast-syntax-highlighting \
+    atload"!_zsh_autosuggest_start" \
+        zsh-users/zsh-autosuggestions \
+    blockf \
+        zsh-users/zsh-completions
 
 zinit wait lucid for \
-	zdharma-continuum/zsh-unique-id \
-	OMZ::lib/git.zsh \
-	atload"unalias grv g" \
-	OMZ::plugins/git/git.plugin.zsh
+    zdharma-continuum/zsh-unique-id \
+    OMZ::lib/git.zsh \
+    atload"unalias grv g" \
+    OMZ::plugins/git/git.plugin.zsh
 
 # Powerlevel10k
 zinit ice depth=1
