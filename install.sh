@@ -117,6 +117,7 @@ install_vim() {
 install_editor() {
   if check_os $OS_MAC; then
     brew install --cask visual-studio-code
+    brew install --cask discord
     # Copy vscode settings
     mkdir -p ~/Library/Application\ Support/Code/User
     cp vscode/* ~/Library/Application\ Support/Code/User/
